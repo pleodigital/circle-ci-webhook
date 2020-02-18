@@ -2,8 +2,6 @@
 
 Plugin adding CP button triggering CircleCI.
 
-![Screenshot](resources/img/plugin-logo.png)
-
 ## Requirements
 
 This plugin requires Craft CMS 3.0.0-beta.23 or later.
@@ -18,26 +16,35 @@ To install the plugin, follow these instructions.
 
 2. Then tell Composer to load the plugin:
 
-        composer require /circle-ci-webhook
+        composer require pleodigital/circle-ci-webhook
 
-3. In the Control Panel, go to Settings → Plugins and click the “Install” button for CircleCi Webhook.
+3. In the Control Panel, go to Settings → Plugins and click the “Install” button for CircleCi Webhook
 
 ## CircleCi Webhook Overview
 
--Insert text here-
+Very simple plugin triggering CircleCI webhook on demand.
 
 ## Configuring CircleCi Webhook
 
--Insert text here-
+1. Go to Control Panel -> Plugins 
+
+2. Go to CircleCI Webhook settings
+
+3. Pass the CircleCI Webhook URL and POST params
 
 ## Using CircleCi Webhook
 
--Insert text here-
+1. Go to Control Panel -> Utilities
+
+2. Go to CircleCi Webhook section
+
+3. Click the "Publish" button
 
 ## CircleCi Webhook Roadmap
 
-Some things to do, and ideas for potential features:
+* Translations
+* More options and deploying status
 
-* Release it
+Feel free to fork project and PR more features ;)
 
 Brought to you by [Pleo Digtial](https://pleodigital.com/)
