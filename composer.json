@@ -1,0 +1,40 @@
+{
+    "name": "pleodigital/circle-ci-webhook",
+    "description": "Plugin adding CP button triggering CircleCI.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "circleci webhook"
+    ],
+    "support": {
+        "docs": "???",
+        "issues": "???"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pleo Digtial",
+            "homepage": "https://pleodigital.com/"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "pleodigital\\circleciwebhook\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "CircleCi Webhook",
+        "handle": "circle-ci-webhook",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "pleodigital\\circleciwebhook\\CircleciWebhook"
+    }
+}

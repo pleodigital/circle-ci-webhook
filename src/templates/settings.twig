@@ -1,0 +1,35 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CircleCi Webhook plugin for Craft CMS 3.x
+ *
+ * CircleCi Webhook Settings.twig
+ *
+ * @author    Pleo Digtial
+ * @copyright Copyright (c) 2020 Pleo Digtial
+ * @link      https://pleodigital.com/
+ * @package   CircleciWebhook
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("pleodigital\\circleciwebhook\\assetbundles\\circleciwebhook\\CircleciWebhookAsset") %}
+
+{{ forms.textField({
+    label: 'CircleCi webhook URL',
+    instructions: 'POST request URL',
+    id: 'url',
+    name: 'url',
+    value: settings['url']})
+}}
+
+{{ forms.textareaField({
+    label: 'CircleCi webhook params',
+    instructions: 'POST request params',
+    id: 'params',
+    name: 'params',
+    rows: 15,
+    value: settings['params']})
+}}

@@ -1,0 +1,47 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * CircleCi Webhook plugin for Craft CMS
+ *
+ * CircleciWebhookUtility Utility Content
+ *
+ * @author    Pleo Digtial
+ * @copyright Copyright (c) 2020 Pleo Digtial
+ * @link      https://pleodigital.com/
+ * @package   CircleciWebhook
+ * @since     1.0.0
+ */
+#}
+
+{% set csrfToken = {
+    csrfTokenName: craft.app.config.general.csrfTokenName,
+    csrfTokenValue: craft.app.request.csrfToken,
+} %}
+
+<script type="text/javascript">
+    window.Craft = {{ csrfToken|json_encode|raw }};
+</script>
+
+<h1>Opublikuj stronę przy pomocy CircleCI</h1>
+
+{% set isDefined = url != '' and params != ''  %}
+
+<div class="circle-ci-deploy-wrapper">
+    {% if not isDefined %}
+        <div class="warning">
+            <p>{{ "Dodaj adres i parametry dla zapytania CircleCI."|t }}</p>
+        </div>
+    {% else %}
+        <div class="success">
+            <p>Klikając przycisk rozpoczniesz proces publikowania strony. Po kilku minutach twoje zmiany będą online. W przypadku problemów skontaktuj się z administratorem strony.</p>
+            <p><br><br>
+                <button
+                    class="btn icon submit"
+                    data-action-url="{{ siteUrl }}actions/circle-ci-webhook/default"
+                >
+                    {{ "Publikuj"|t }}
+                </button>
+            </p>
+        </div>
+    {% endif %}
+</div>
