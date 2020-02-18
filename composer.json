@@ -11,8 +11,8 @@
         "circleci webhook"
     ],
     "support": {
-        "docs": "???",
-        "issues": "???"
+        "docs": "https://github.com/pleodigital/circle-ci-webhook",
+        "issues": "https://github.com/pleodigital/circle-ci-webhook"
     },
     "license": "MIT",
     "authors": [
