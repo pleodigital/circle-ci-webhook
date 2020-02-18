@@ -22,7 +22,7 @@
             data[window.Craft.csrfTokenName] = window.Craft.csrfTokenValue; // Append CSRF Token
             $.ajax({
                 type: "POST",
-                url: $(_this).attr('data-action-url'), 
+                url: '/actions/circle-ci-webhook/default', 
                 data: data,  
                 error: function () {
                     $(_this).removeClass('add loading');
