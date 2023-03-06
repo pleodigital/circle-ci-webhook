@@ -60,7 +60,7 @@ class CircleciWebhook extends Plugin
      *
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     // Public Methods
     // =========================================================================
@@ -137,7 +137,7 @@ class CircleciWebhook extends Plugin
      *
      * @return \craft\base\Model|null
      */
-    protected function createSettingsModel()
+    protected function createSettingsModel() : ? \craft\base\Model
     {
         return new Settings();
     }
