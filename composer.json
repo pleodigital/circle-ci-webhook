@@ -2,7 +2,7 @@
     "name": "pleodigital/circle-ci-webhook",
     "description": "Plugin adding CP button triggering CircleCI.",
     "type": "craft-plugin",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "keywords": [
         "craft",
         "cms",
