@@ -59,7 +59,7 @@ class CircleciWebhookUtility extends Utility
      *
      * @return string|null The path to the utility SVG icon
      */
-    public static function iconPath()
+    public static function iconPath(): ?string
     {
         return Craft::getAlias("@pleodigital/circleciwebhook/assetbundles/circleciwebhookutilityutility/dist/img/CircleciWebhookUtility-icon.svg");
     }
